@@ -134,9 +134,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Core\Application.cpp" />
+    <ClCompile Include="Graphics\Image.cpp" />
+    <ClCompile Include="Graphics\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Application.h" />
+    <ClInclude Include="Graphics\Image.h" />
+    <ClInclude Include="Graphics\Texture.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
