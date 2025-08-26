@@ -1,12 +1,13 @@
-#include <Core/Application.h>
-
-//constexpr std::string_view title = "Syrender";
-//constexpr std::size_t width = 400;
-//constexpr std::size_t height = 400;
+#include <print>
+#include <Graphics/Image.h>
 
 int main() {
-	// sfr::Application app(title, width, height);
-	// app.run();
+	sfr::Image image;
 
+	image.create(400, 400, 24);
+	image.clearColor({ 255, 255, 255, 0 });
+	image.encode("test.bmp");
+
+	std::println("Image created!");
 	return 0;
 }

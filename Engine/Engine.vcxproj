@@ -141,6 +141,7 @@
     <ClInclude Include="Core\Application.h" />
     <ClInclude Include="Graphics\Image.h" />
     <ClInclude Include="Graphics\Texture.h" />
+    <ClInclude Include="Graphics\Types.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

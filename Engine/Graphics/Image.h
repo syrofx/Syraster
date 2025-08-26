@@ -1,6 +1,8 @@
 #pragma once
 #include <fstream>
 
+#include "Types.h"
+
 namespace sfr
 {
 #pragma pack(push, 2)
@@ -21,6 +23,7 @@ namespace sfr
 		unsigned short bitCount;
 	};
 
+#pragma pack(push, 2)
 	struct BitMapSaveHeader {
 		BitMapInfoHeader coreHeader;
 		unsigned long compression;
@@ -30,6 +33,7 @@ namespace sfr
 		unsigned long colorUsed;
 		unsigned long colorImportant;
 	};
+#pragma pack(pop)
 
 	enum RegionCode {
 		INSIDE = 0,
@@ -46,7 +50,10 @@ namespace sfr
 
 		void create(std::size_t width, std::size_t height, std::size_t bpp);
 		void encode(const std::string_view& filename);
-		void decode();
+		void decode(const std::string_view& filename);
+
+		void setPixel(int x, int y, const Color& color);
+		void clearColor(const Color& color);
 
 		int getWidth() const;
 		int getHeight() const;
