@@ -5,13 +5,13 @@
 
 namespace sfr
 {
-#pragma pack(push, 2)
+#pragma pack(push, 1)
 	struct BitMapFileHeader {
 		unsigned short type;
-		unsigned short size;
+		unsigned long size;
 		unsigned short reserved1;
 		unsigned short reserved2;
-		unsigned short offBits;
+		unsigned long offBits;
 	};
 #pragma pack(pop)
 
@@ -23,7 +23,6 @@ namespace sfr
 		unsigned short bitCount;
 	};
 
-#pragma pack(push, 2)
 	struct BitMapSaveHeader {
 		BitMapInfoHeader coreHeader;
 		unsigned long compression;
@@ -33,7 +32,6 @@ namespace sfr
 		unsigned long colorUsed;
 		unsigned long colorImportant;
 	};
-#pragma pack(pop)
 
 	enum RegionCode {
 		INSIDE = 0,
@@ -53,6 +51,8 @@ namespace sfr
 		void decode(const std::string_view& filename);
 
 		void setPixel(int x, int y, const Color& color);
+		Color getPixel(int x, int y) const;
+
 		void clearColor(const Color& color);
 
 		int getWidth() const;
