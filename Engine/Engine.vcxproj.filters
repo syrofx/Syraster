@@ -38,5 +38,7 @@
     <ClInclude Include="Graphics\Types.h">
       <Filter>Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="Graphics\Color.h" />
+    <ClInclude Include="Graphics\Vector.h" />
   </ItemGroup>
 </Project>

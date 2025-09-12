@@ -1,7 +1,7 @@
 #pragma once
 #include <fstream>
 
-#include "Types.h"
+#include "Color.h"
 
 namespace sfr
 {
